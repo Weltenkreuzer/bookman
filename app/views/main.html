@@ -1,0 +1,12 @@
+  <div class="col-sm-8">
+    <div class="panel panel-primary">
+    <div class="panel-heading">All Books</div>
+     <ul class="panel-body list-unstyled">
+      <li ng-repeat="book in books" class="pull-left" style="width:225px; margin-bottom: 40px;">
+        <p class="text-center"><img src="{{book.cover}}" width="150" height="225"></p>
+        <p class="text-center"><strong>{{book.titel}}</strong></p>
+        <p class="text-center">{{autoren[book.autor[0]-1].vorname}} {{autoren[book.autor[0]-1].nachname}}</p>
+      </li>
+     </ul>
+    </div>
+  </div>
