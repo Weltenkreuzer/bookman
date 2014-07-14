@@ -1,0 +1,43 @@
+  <div class="panel panel-default" ng-include="'details-sm.html'"></div>
+
+ <div class="panel-group" id="accordion" data-ng-controller="AuthorListCtrl">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+          Alle Autoren
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in">
+		 <ul class="panel-body list-unstyled" >
+		    <li ng-repeat="author in autoren">
+		        <p class="text-left">
+		            <a href="#/author/{{author.id}}">{{author.vorname}} {{author.nachname}}</a>
+		        </p>
+		    </li>
+		</ul>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+          Alle Reihen
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse">
+		 <ul class="panel-body list-unstyled">
+		    <li ng-repeat="reihe in reihen">
+		        <p class="text-left">
+		            <a href="#/reihe/{{reihe.id}}">{{reihe.titel}}</a>
+		        </p>
+		    </li>
+		</ul>
+    </div>
+  </div>
+</div>
+
+
+

@@ -49,8 +49,12 @@ angular
         controller: 'AboutCtrl'
       })
       .when('/author/:authorId', {
-        templateUrl: 'views/author.html',
+        templateUrl: 'views/main.html',
         controller: 'AuthorCtrl'
+      })
+      .when('/reihe/:reiheId', {
+        templateUrl: 'views/main.html',
+        controller: 'ReiheCtrl'
       })
       .otherwise({
         redirectTo: '/'
