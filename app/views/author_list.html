@@ -1,0 +1,7 @@
+ <ul class="panel-body list-unstyled" data-ng-controller="AuthorListCtrl">
+    <li ng-repeat="author in autoren">
+        <p class="text-left">
+            <a href="#/author/{{author.id}}">{{author.vorname}} {{author.nachname}}</a>
+        </p>
+    </li>
+</ul>

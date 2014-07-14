@@ -2,7 +2,8 @@
   "name": "bookman",
   "version": "0.0.0",
   "dependencies": {
-    "jpegtran-bin": "0.2.0"
+    "jpegtran-bin": "0.2.0",
+    "taffydb": "*"
     },
   "devDependencies": {
     "grunt": "^0.4.5",

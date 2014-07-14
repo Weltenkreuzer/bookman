@@ -16,7 +16,6 @@ var booksDB = TAFFY([
   {id:4, titel: 'Die Tribute von Panem. Gefährliche Liebe', autor: [2], cover:'http://ecx.images-amazon.com/images/I/51N1FEWWwRL.jpg', reihe: 2, nummer: 2},
   {id:5, titel: 'Die sonderbare Buchhandlung des Mr. Penumbra', autor: [3], cover:'http://ecx.images-amazon.com/images/I/51FbIY49hZL.jpg'}
 ]);
-console.log(booksDB);
 
 var autorDB = TAFFY([
   {id:1, vorname: 'Joanne K.', nachname: 'Rowling'},
@@ -28,6 +27,7 @@ var reiheDB = TAFFY([
   {id:1, titel: 'Harry Potter'},
   {id:2, titel: 'Die Tribute von Panem'}
 ]);
+
 
 angular
   .module('bookmanApp', [
@@ -47,6 +47,10 @@ angular
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
+      })
+      .when('/author/:authorId', {
+        templateUrl: 'views/author.html',
+        controller: 'AuthorCtrl'
       })
       .otherwise({
         redirectTo: '/'

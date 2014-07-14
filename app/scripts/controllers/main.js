@@ -10,6 +10,14 @@
 angular.module('bookmanApp')
   .controller('MainCtrl', function ($scope) {
     $scope.books = booksDB().get();
-    $scope.reihen = reiheDB();
-    $scope.autoren = autorDB();
+    $scope.reihen = reiheDB().get();
+    $scope.autoren = autorDB().get();
+  })
+  .controller('AuthorCtrl', function ($scope, $routeParams) {
+    $scope.books = booksDB({autor:{has:parseInt($routeParams.authorId)}}).get();
+    $scope.reihen = reiheDB().get();
+    $scope.autoren = autorDB().get();
+  })
+  .controller('AuthorListCtrl', function ($scope) {
+    $scope.autoren = autorDB().order('nachname').get();
   });
