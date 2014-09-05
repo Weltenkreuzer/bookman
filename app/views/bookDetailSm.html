@@ -1,0 +1,11 @@
+ <div ng-if="abook && amenu==1" class="panel panel-default">
+  <div class="panel-body">
+    <p class="text-center">
+      <img src="{{abook.cover}}" width="200">
+    </p>
+    <p class="text-center"><strong>{{abook.titel}}</strong></p>
+    <p class="text-center"><a ng-click="filter('reihe', abook.reihe)">{{reihen[abook.reihe-1].titel}}</a>, Teil {{abook.nummer}}</p>
+
+    <p class="text-center"><a ng-click="filter('autor', abook.autor[0])">{{autoren[abook.autor[0]-1].vorname}} {{autoren[abook.autor[0]-1].nachname}}</a></p>
+  </div>
+ </div>

@@ -1,0 +1,19 @@
+  <div class="panel panel-default">
+    <div class="panel-heading" ng-click="amenu='author'">
+      <h4 class="panel-title">
+        Alle Autoren
+      </h4>
+    </div>
+    <input ng-model="filter_author" ng-change="amenu='author'" class="sidebar-filter" placeholder="Filter..." />
+    <div ng-if="amenu=='author'">
+     <div class="panel-body">
+      <ul class="list-unstyled" >
+        <li ng-repeat="author in autoren | filter:filter_author" >
+          <p class="text-left">
+            <a ng-href="#/author/{{author.id}}">{{author.vorname}} {{author.nachname}}</a>
+          </p>
+        </li>
+      </ul>
+     </div>
+    </div>
+  </div>

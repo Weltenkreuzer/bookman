@@ -1,0 +1,17 @@
+  <div class="panel panel-default">
+    <div class="panel-heading" ng-click="amenu='series'">
+      <h4 class="panel-title">
+          Alle Reihen
+      </h4>
+    </div>
+    <input ng-model="filter_series" ng-change="amenu='series'" class="sidebar-filter" placeholder="Filter..." />
+    <div ng-if="amenu=='series'">
+     <ul class="panel-body list-unstyled">
+        <li ng-repeat="reihe in reihen | filter:filter_series">
+            <p class="text-left">
+                <a ng-click="filter('reihe', reihe.id)">{{reihe.titel}}</a>
+            </p>
+        </li>
+    </ul>
+    </div>
+  </div>

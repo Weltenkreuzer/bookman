@@ -4,5 +4,5 @@
   {"id":3, "titel": "Die Tribute von Panem. Tödliche Spiele", "autor": [2], "cover":"http://ecx.images-amazon.com/images/I/517wkVZfQ2L.jpg", "reihe": 2, "nummer": 1},
   {"id":4, "titel": "Die Tribute von Panem. Gefährliche Liebe", "autor": [2], "cover":"http://ecx.images-amazon.com/images/I/51N1FEWWwRL.jpg", "reihe": 2, "nummer": 2},
   {"id":5, "titel": "Die sonderbare Buchhandlung des Mr. Penumbra", "autor": [3], "cover":"http://ecx.images-amazon.com/images/I/51FbIY49hZL.jpg"},
-  {"id":2, "titel": "Harry Potter und der Gefangene von Azkaban", "autor": [1], "cover":"http://ecx.images-amazon.com/images/I/51cGGIGpXeL.jpg", "reihe": 1, "nummer": 3}
+  {"id":6, "titel": "Harry Potter und der Gefangene von Azkaban", "autor": [1], "cover":"http://ecx.images-amazon.com/images/I/51cGGIGpXeL.jpg", "reihe": 1, "nummer": 3}
 ]

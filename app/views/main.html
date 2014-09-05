@@ -1,71 +1,20 @@
-  <div class=" col-sm-8">
-    <div class="panel panel-primary">
-    <div class="panel-heading">All Books</div>
-     <ul class="panel-body list-unstyled">
-      <li ng-repeat="book in books" class="pull-left" style="width:120px; margin-bottom: 30px;">
-        <p class="text-center">
-          <img src="{{book.cover}}" width="100" height="150" ng-click="active($index)">
-        </p>
-      </li>
-     </ul>
+<div class="col-sm-8" ng-switch="mainview">
+
+    <div ng-switch-when="authorView">
+      <author-view></author-view>
     </div>
-  </div>
+
+    <div ng-switch-when="standardView">
+      <standard-view></standard-view>
+    </div>
+
+
+</div>
 
 <div class="col-sm-4">
 
- <div ng-if="abook" class="panel panel-default">
-  <div class="panel-body">
-    <p class="text-center">
-      <img src="{{abook.cover}}" width="200">
-    </p>
-    <p class="text-center"><strong>{{abook.titel}}</strong></p>
-    <p class="text-center"><a href="#/author/{{abook.autor[0]}}">{{autoren[abook.autor[0]-1].vorname}} {{autoren[abook.autor[0]-1].nachname}}</a></p>
-  </div>
- </div>
-
- <div class="panel-group" id="accordion" data-ng-controller="AuthorListCtrl">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-          Alle Autoren
-        </a>
-      </h4>
-    </div>
-    <input ng-model="filter_author" class="sidebar-filter" placeholder="Filter..." />
-
-    <div id="collapseOne" class="panel-collapse collapse">
-     <div class="panel-body">
-      <ul class="list-unstyled" >
-        <li ng-repeat="author in autoren | filter:filter_author" >
-          <p class="text-left">
-            <a href="#/author/{{author.id}}">{{author.vorname}} {{author.nachname}}</a>
-          </p>
-        </li>
-      </ul>
-     </div>
-    </div>
-  </div>
-
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-          Alle Reihen
-        </a>
-      </h4>
-    </div>
-    <input ng-model="filter_series" class="sidebar-filter" placeholder="Filter..." />
-    <div id="collapseTwo" class="panel-collapse collapse">
-     <ul class="panel-body list-unstyled">
-        <li ng-repeat="reihe in reihen | filter:filter_series">
-            <p class="text-left">
-                <a href="#/reihe/{{reihe.id}}">{{reihe.titel}}</a>
-            </p>
-        </li>
-    </ul>
-    </div>
-  </div>
- </div>
+  <book-detail-sm></book-detail-sm>
+  <filter-author></filter-author>
+  <filter-series></filter-series>
 
 </div>
