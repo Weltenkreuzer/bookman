@@ -76,6 +76,20 @@ angular.module('bookmanApp')
       $scope.filter_series = "";
     };
   })
+  .controller('SearchCtrl', function ($scope, $http) {
+
+    $scope.search = function() {
+      if ($scope.text) {
+        $http.get(encodeURI('http://localhost:3000/search?q=' + $scope.text))
+          .then(function(res){
+            $scope.$parent.result = res.data;  
+          });
+
+        $scope.$parent.mainview = 'searchView';
+      }
+    };
+
+  })
   .directive('filterSeries', function(){
     return {
       replace:'true',
@@ -97,6 +111,13 @@ angular.module('bookmanApp')
       templateUrl:'/views/bookDetailSm.html'
     };
   })
+  .directive('searchForm', function(){
+    return {
+      replace:'true',
+      restrict:'EC',
+      templateUrl:'/views/searchForm.html'
+    };
+  })
   .directive('standardView', function(){
     return {
       replace:'true',
@@ -109,5 +130,12 @@ angular.module('bookmanApp')
       replace:'true',
       restrict:'EACM',
       templateUrl:'/views/authorView.html'
+    };
+  })
+  .directive('searchView', function(){
+    return {
+      replace:'true',
+      restrict:'EACM',
+      templateUrl:'/views/searchView.html'
     };
   });
