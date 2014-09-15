@@ -28,13 +28,16 @@ angular.module('bookmanApp')
   })
   .controller('MainCtrl', function ($scope, $rootScope) {
 
+  // Aktuell versucht er beim ersten Laden den Scope zu füllen, bevor durch die 
+  // Initialisierung der RootScope gesetzt ist.
+
   $scope.books = $rootScope.booksDB().order('autor').get();
   $scope.autoren = $rootScope.autorDB().get();
   $scope.reihen = $rootScope.reiheDB().get();
  
   $scope.mainview = 'standardView';
   $scope.abook = false;
-  $scope.filters = { };  
+  $scope.filters = {};  
   $scope.amenu = 2;
    
 
@@ -78,14 +81,33 @@ angular.module('bookmanApp')
   })
   .controller('SearchCtrl', function ($scope, $http) {
 
+    var books = [];
+
+    function addBook(data) {
+      var newBook = {};
+
+      console.log(data.ItemAttributes[0].Title);
+
+      newBook.ASIN = data.ASIN[0];
+      newBook.title = data.ItemAttributes[0].Title[0];
+      newBook.authorString = data.ItemAttributes[0].Author;
+      newBook.cover = data.LargeImage[0].URL[0];
+
+      console.log(newBook);
+      books.push(newBook);
+      console.log(books);
+    }
+
     $scope.search = function() {
       if ($scope.text) {
         $http.get(encodeURI('http://localhost:3000/search?q=' + $scope.text))
           .then(function(res){
-            $scope.$parent.result = res.data;  
+            var result = res.data;  
+            result.forEach(addBook);
+            $scope.$parent.books = books;
+            $scope.$parent.mainview = 'standardView';
           });
 
-        $scope.$parent.mainview = 'searchView';
       }
     };
 
