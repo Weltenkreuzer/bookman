@@ -7,9 +7,9 @@
     <input ng-model="filter_series" ng-change="amenu='series'" class="sidebar-filter" placeholder="Filter..." />
     <div ng-if="amenu=='series'">
      <ul class="panel-body list-unstyled">
-        <li ng-repeat="reihe in reihen | filter:filter_series">
+        <li ng-repeat="reihe in series | filter:filter_series">
             <p class="text-left">
-                <a ng-click="filter('reihe', reihe.id)">{{reihe.titel}}</a>
+                <a href="#/series/{{reihe.id}}">{{reihe.title}}</a>
             </p>
         </li>
     </ul>

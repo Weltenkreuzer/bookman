@@ -1,8 +1,8 @@
 [
-  {"id":1, "titel": "Harry Potter und der Stein der Weisen", "autor": [1], "cover":"http://ecx.images-amazon.com/images/I/51ZU%2BCvkTyL.jpg", "reihe": 1, "nummer": 1},
-  {"id":2, "titel": "Harry Potter und die Kammer des Schreckens", "autor": [1], "cover":"http://ecx.images-amazon.com/images/I/51dNrc6oESL.jpg", "reihe": 1, "nummer": 2},
-  {"id":3, "titel": "Die Tribute von Panem. Tödliche Spiele", "autor": [2], "cover":"http://ecx.images-amazon.com/images/I/517wkVZfQ2L.jpg", "reihe": 2, "nummer": 1},
-  {"id":4, "titel": "Die Tribute von Panem. Gefährliche Liebe", "autor": [2], "cover":"http://ecx.images-amazon.com/images/I/51N1FEWWwRL.jpg", "reihe": 2, "nummer": 2},
-  {"id":5, "titel": "Die sonderbare Buchhandlung des Mr. Penumbra", "autor": [3], "cover":"http://ecx.images-amazon.com/images/I/51FbIY49hZL.jpg"},
-  {"id":6, "titel": "Harry Potter und der Gefangene von Azkaban", "autor": [1], "cover":"http://ecx.images-amazon.com/images/I/51cGGIGpXeL.jpg", "reihe": 1, "nummer": 3}
+  {"id":1, "title": "Harry Potter und der Stein der Weisen", "authors": [1], "authorStringF": "Joanne K. Rowling", "coverUrl":"http://ecx.images-amazon.com/images/I/51ZU%2BCvkTyL.jpg", "series": 1, "number": 1},
+  {"id":2, "title": "Harry Potter und die Kammer des Schreckens", "authors": [1], "authorStringF": "Joanne K. Rowling", "coverUrl":"http://ecx.images-amazon.com/images/I/51dNrc6oESL.jpg", "series": 1, "number": 2},
+  {"id":3, "title": "Die Tribute von Panem. Tödliche Spiele", "authors": [2], "authorStringF": "Suzanne Collins", "coverUrl":"http://ecx.images-amazon.com/images/I/517wkVZfQ2L.jpg", "series": 2, "number": 1},
+  {"id":4, "title": "Die Tribute von Panem. Gefährliche Liebe", "authors": [2], "authorStringF": "Suzanne Collins", "coverUrl":"http://ecx.images-amazon.com/images/I/51N1FEWWwRL.jpg", "series": 2, "number": 2},
+  {"id":5, "title": "Die sonderbare Buchhandlung des Mr. Penumbra", "authors": [3], "authorStringF": "Robin Sloan", "coverUrl":"http://ecx.images-amazon.com/images/I/51FbIY49hZL.jpg"},
+  {"id":6, "title": "Harry Potter und der Gefangene von Azkaban", "authors": [1], "authorStringF": "Joanne K. Rowling", "coverUrl":"http://ecx.images-amazon.com/images/I/51cGGIGpXeL.jpg", "series": 1, "number": 3}
 ]

@@ -11,9 +11,9 @@
     </div>
     <div id="collapseOne" class="panel-collapse collapse in">
 		 <ul class="panel-body list-unstyled" >
-		    <li ng-repeat="author in autoren">
+		    <li ng-repeat="author in authors">
 		        <p class="text-left">
-		            <a href="#/author/{{author.id}}">{{author.vorname}} {{author.nachname}}</a>
+		            <a href="#/author/{{author.id}}">{{author.firstName}} {{author.lastName}}</a>
 		        </p>
 		    </li>
 		</ul>
@@ -29,9 +29,9 @@
     </div>
     <div id="collapseTwo" class="panel-collapse collapse">
 		 <ul class="panel-body list-unstyled">
-		    <li ng-repeat="reihe in reihen">
+		    <li ng-repeat="reihe in series">
 		        <p class="text-left">
-		            <a href="#/reihe/{{reihe.id}}">{{reihe.titel}}</a>
+		            <a href="#/series/{{reihe.id}}">{{reihe.title}}</a>
 		        </p>
 		    </li>
 		</ul>

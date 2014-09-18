@@ -1,5 +1,5 @@
 [
-  {"id":1, "vorname": "Joanne K.", "nachname": "Rowling"},
-  {"id":2, "vorname": "Suzanne", "nachname": "Collins"},
-  {"id":3, "vorname": "Robin", "nachname": "Sloan"}
+  {"id":1, "firstName": "Joanne", "middleName":"K.", "lastName": "Rowling"},
+  {"id":1, "firstName": "Suzanne", "lastName": "Collins"},
+  {"id":1, "firstName": "Robin", "middleName":"N.", "lastName": "Sloan"}
 ]

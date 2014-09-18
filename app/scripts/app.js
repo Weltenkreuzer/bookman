@@ -33,7 +33,7 @@ angular
         templateUrl: 'views/main.html',
         controller: 'AuthorCtrl'
       })
-      .when('/reihe/:reiheId', {
+      .when('/series/:reiheId', {
         templateUrl: 'views/main.html',
         controller: 'ReiheCtrl'
       })

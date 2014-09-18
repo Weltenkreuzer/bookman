@@ -2,9 +2,9 @@
     <div class="panel-heading">All Books</div>
      <ul class="panel-body list-unstyled">
       <li ng-repeat="book in books" class="pull-left" style="width:200px; margin-bottom: 30px;">
-        <p class="text-center"><img src="{{book.cover}}" width="150" height="225"></p>
-        <p class="text-center"><strong>{{book.titel}}</strong></p>
-        <p class="text-center"><a href="#/author/{{book.autor[0]}}">{{autoren[book.autor[0]-1].vorname}} {{autoren[book.autor[0]-1].nachname}}</a></p>
+        <p class="text-center"><img src="{{book.coverUrl}}" width="150" height="225"></p>
+        <p class="text-center"><strong>{{book.title}}</strong></p>
+        <p class="text-center"><a href="#/author/{{book.authors[0]}}">{{authors[book.authors[0]-1].firstName}} {{authors[book.authors[0]-1].lastName}}</a></p>
       </li>
      </ul>
     </div>

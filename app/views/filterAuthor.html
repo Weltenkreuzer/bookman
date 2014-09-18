@@ -8,9 +8,9 @@
     <div ng-if="amenu=='author'">
      <div class="panel-body">
       <ul class="list-unstyled" >
-        <li ng-repeat="author in autoren | filter:filter_author" >
+        <li ng-repeat="author in authors | filter:filter_author" >
           <p class="text-left">
-            <a ng-href="#/author/{{author.id}}">{{author.vorname}} {{author.nachname}}</a>
+            <a ng-href="#/author/{{author.id}}">{{author.firstName}} {{author.lastName}}</a>
           </p>
         </li>
       </ul>
